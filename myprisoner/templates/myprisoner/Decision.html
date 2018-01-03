@@ -1,0 +1,90 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Your Choice Nº {{ round }}
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'global/matrix.css' %}" />
+
+    <style>
+        .highlight-row-on-hover:hover td {
+            background-color: #fcf8e3;
+        }
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+
+    
+    {% if treatment == 'AL' or treatment == 'SL' %}
+
+    <p style='margin-left:5em;margin-right:5em;margin-top:1em' align='justify'>
+
+    At the end of the experiment a respondent
+    will be chosen at random and for her/him only one of the sixteen choices will be paid. This respondent will receive
+    the difference between the endowment and the loss at the corresponding point in time.
+
+    </p>
+    <p style='margin-left:5em;margin-right:5em;margin-top:1em' align='justify'>
+    <i>For example:
+    Imagine in the first choice you make you have an endowment of 20€ and you decide to lose 10€ in four weeks.
+        If you are randomly selected and the first question of the 16
+    is also randomly selected;  you will receive 10€ in 4 weeks from the moment you submit your answers.</
+    </i> <br>
+    </p>
+    <center>
+    <hr>
+    <p style="margin-top:3em">
+        <b>Please chose an option.</b><br>
+    Take into account that the time it is counted from today, the day you submit the answer.<br>
+    Once you have moved to the next page you can't come back.
+    </p>
+    <p>
+        <b>You start with an endowment of {{ endowment }}€.</b>
+    </p>
+    <div class="form-group required">
+                <td><button name="cooperate" value="True" class="btn btn-primary btn-large">Lose {{ x1 }}€ and receive the difference in {{ t1 }} weeks</button></td>
+        or
+                <td><button name="cooperate" value="False" class="btn btn-primary btn-large">Lose {{ x2 }}€ and receive the difference in {{ t2 }} weeks</button></td>
+    </div>
+
+    </center>
+    {% endif %}
+
+    {% if treatment == 'AG' or treatment == 'SG' %}
+
+    <p style='margin-left:5em;margin-right:5em;margin-top:1em' align='justify'>
+    At the end of the experiment a respondent
+    will be chosen at random and for her/him only one of the sixteen choices will be paid. This respondent will receive
+    the amount at the corresponding point in time.
+
+    </p>
+    <p style='margin-left:5em;margin-right:5em;margin-top:1em' align='justify'>
+    <i>For example:
+    Imagine the first choice you make is to receive 10€ in four weeks. If you are randomly selected and the first question of the 16
+    is also randomly selected; you will receive 10€ in 4 weeks from the moment you submit your answers.
+    </i> <br>
+    </p>
+    <center>
+    <hr>
+    <p style="margin-top:3em">
+        <b>Please chose an option.</b><br>
+    Take into account that the time it is counted from today, the day you submit the answer.<br>
+    Once you have moved to the next page you can't come back.
+    </p>
+    <center>
+    <div class="form-group required"><br>
+                <td><button name="cooperate" value="True" class="btn btn-primary btn-large">Gain {{ x1 }}€ and receive them in {{ t1 }} weeks</button></td>
+        or
+                <td><button name="cooperate" value="False" class="btn btn-primary btn-large">Gain {{ x2 }}€ and receive them in {{ t2 }} weeks</button></td>
+    </div>
+    </center>
+    {% endif %}
+
+{% endblock %}
+

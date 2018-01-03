@@ -1,0 +1,32 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Introduction
+{% endblock %}
+
+{% block content %}
+
+
+    <p style=margin-left:5em;margin-right:5em;margin-top:1em;>
+    Welcome.<br>
+    </p>
+    <p style='margin-left:5em;margin-right:5em;margin-top:1em' align='justify'>
+    Welcome.
+    In this survey  you will be asked 16 questions.
+    In each question you have to choose between two options: receive a certain amount of money at one point in time, or a different amount of money at another point in time.
+    At the end of the experiment there will be a random lottery which decides one winner whose reward depends on her/his answers.
+    All the answers are recorded.
+    This game is completely anonymous.
+
+    </p>
+
+    <p style='margin-left:5em;margin-right:5em;margin-top:1em' align='justify'>
+        In the following pages two buttons are going to be displayed. <b>Choose one option.</b> After you will automatically move to
+        the next question. Keep in mind that there is no return button.
+    </p>
+
+    {% next_button %}
+
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Summary of your choices
+{% endblock %}
+
+{% block content %}
+
+    <h4>Results</h4>
+    <table class="table">
+        <tr>
+            <th>Round</th>
+            <th>Choice</th>
+        </tr>
+    {% if treatment == 'AL' or treatment == 'SL' %}
+
+        {% for payoff, time, round in lst %}
+            <tr>
+
+
+                <td>{{ round }}</td>
+                <td>
+                    You chose to lose {{ payoff }} and receive the difference in {{ time }} weeks.
+                </td>
+            </tr>
+        {% endfor %}
+    {%  endif %}
+
+    {% if treatment == 'AG' or treatment == 'SG' %}
+
+        {% for payoff, time, round in lst %}
+            <tr>
+
+
+                <td>{{ round }}</td>
+                <td>
+                    You chose to gain {{ payoff }} in {{ time }} weeks.
+                </td>
+            </tr>
+        {% endfor %}
+    {%  endif %}
+
+
+    </table>
+
+
+    {% next_button %}
+
+
+{% endblock %}

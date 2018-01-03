@@ -1,0 +1,66 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Introduction
+{% endblock %}
+
+{% block content %}
+    {% if treatment == 'AL' or treatment == 'SL' %}
+    <div>
+
+    <p style=margin-left:5em;margin-right:5em;margin-top:1em;>
+    Welcome.<br>
+    </p>
+    <p style='margin-left:5em;margin-right:5em;margin-top:1em' align='justify'>
+    In the following survey you are going to make 16 choices in which at first you will receive an endowment
+        then you need to decide if you want to lose
+        a part of your endowment at one point in time,
+    or a different amount at another point in time.
+    The decisions you make are recorded.
+    At the end of the experiment a respondent
+    will be chosen at random and for her/him only one of the sixteen choices will be paid. This respondent will receive
+    the difference between the endowment and the lose at the corresponding point in time.
+    </p>
+    <p style='margin-left:5em;margin-right:5em;margin-top:1em' align='justify'>
+        <i>For example:
+        Imagine in the first choice you make you have an endowment of 20 euros and you decide to lose 10 euros in four weeks.
+            If you are randomly selected and the first question of the 16
+        is also randomly selected;  you will receive 10 euros in 4 weeks from the moment you submit your answers.</i> <br>
+    </p>
+    <p style='margin-left:5em;margin-right:5em;margin-top:1em' align='justify'>
+        In the following pages two buttons are going to be displayed. <b>Choose one option.</b> After you will automatically move to
+        the next question. Keep in mind that there is no return button.
+    </p>
+    </div>
+    {% endif %}
+
+    {% if treatment == 'AG' or treatment == 'SG' %}
+    <div>
+
+    <p style=margin-left:5em;margin-right:5em;margin-top:1em;>
+    Welcome.<br>
+    </p>
+    <p style='margin-left:5em;margin-right:5em;margin-top:1em' align='justify'>
+    In the following survey you are going to make 16 choices where you need to decide if you want an amount of money at one point in time,
+    or a different amount at another point in time.
+    The decisions you make are recorded.
+    At the end of the experiment a respondent
+    will be chosen at random and for her/him only one of the sixteen choices will be paid. This respondent will receive
+    the amount at the corresponding point in time.
+    </p>
+    <p style='margin-left:5em;margin-right:5em;margin-top:1em' align='justify'>
+        <i>For example:
+        Imagine the first choice you make is to receive 10 euros in four weeks. If you are randomly selected and the first question of the 16
+        is also randomly selected;  you will receive 10 euros in 4 weeks from the moment you submit your answers.</i> <br>
+    </p>
+    <p style='margin-left:5em;margin-right:5em;margin-top:1em' align='justify'>
+        In the following pages two buttons are going to be displayed. <b>Choose one option.</b> After you will automatically move to
+        the next question. Keep in mind that there is no return button.
+    </p>
+    </div>
+    {% endif %}
+    {% next_button %}
+
+
+{% endblock %}
