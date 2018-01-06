@@ -6,8 +6,7 @@ Otree experiment on MEL tasks with 4 different treatments: \
   Loss-Speedup. 
   
 Created for the "Experimental Economics" M1 class at TSE, given by Chen, Daniel L. in order 
-to present the final project "Does the ITCH-model explain intertemporal 
-choices regarding losses?: Experimental evidence."
+to present the final project "The ITCH-model and predictive capabilites:  Experimental evidence of model fit with perceived losses"
 by Ávila, Antonio; Cosma, Bianca; García, Clara & Hanson, Amund. 
 
 Design done by the authors of the final document with important help of Yutong, Li who also
